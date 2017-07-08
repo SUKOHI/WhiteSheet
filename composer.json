@@ -1,6 +1,6 @@
 {
     "name": "sukohi/white-sheet",
-    "description": "A Laravel package to generate PHP, JS, HTML code & find column or table in command line.",
+    "description": "A Laravel package to get many kinds of DB information through command line.",
     "authors": [
         {
             "name": "Sukohi",

@@ -1,7 +1,5 @@
 # WhiteSheet
-A Laravel package to ..  
-* Generate PHP, JS, HTML code related to DB
-* Find column or table name
+A Laravel package to get many kinds of DB information through command line.
 
 (This package is maintained under L5.4)
 
@@ -336,7 +334,7 @@ Note: Output code is including mutators.
 
 e.g.)
 
-    php artisan user
+    php artisan db:find user
 
     /* Output
     
@@ -345,6 +343,29 @@ e.g.)
          => updated_user_id
          
         [ users ]:
+
+    */
+    
+## 3. Show fields 
+
+    php artisan db:fields TABLE_NAME
+
+e.g.)
+
+    php artisan db:fields users
+
+    /* Output
+    
+        [ users ]:
+         - id
+         - name
+         - email
+         - password
+         - provider_name
+         - provider_id
+         - remember_token
+         - created_at
+         - updated_at
 
     */
     

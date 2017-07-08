@@ -27,19 +27,38 @@ class WhiteSheetServiceProvider extends ServiceProvider {
      */
     public function register()
     {
+        // Code
         $this->app->singleton('command.db:code', function ($app) {
 
             return $app['Sukohi\WhiteSheet\Commands\CodeCommand'];
 
         });
         $this->commands('command.db:code');
+        $this->loadViewsFrom(__DIR__.'/views', 'white-sheet');
+
+        // Find
         $this->app->singleton('command.db:find', function ($app) {
 
             return $app['Sukohi\WhiteSheet\Commands\FindCommand'];
 
         });
         $this->commands('command.db:find');
-        $this->loadViewsFrom(__DIR__.'/views', 'white-sheet');
+
+        // Fields
+        $this->app->singleton('command.db:fields', function ($app) {
+
+            return $app['Sukohi\WhiteSheet\Commands\FieldsCommand'];
+
+        });
+        $this->commands('command.db:fields');
+
+        // Count
+        $this->app->singleton('command.db:count', function ($app) {
+
+            return $app['Sukohi\WhiteSheet\Commands\CountCommand'];
+
+        });
+        $this->commands('command.db:count');
     }
 
     /**
