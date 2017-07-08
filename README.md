@@ -369,6 +369,20 @@ e.g.)
 
     */
     
+## 3. Show rows 
+
+    php artisan db:count TABLE_NAME
+
+e.g.)
+
+    php artisan db:count items
+
+    /* Output
+    
+        [ items ]: 12345 rows
+
+    */
+    
 
 # License
 
