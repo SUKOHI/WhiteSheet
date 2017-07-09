@@ -3,6 +3,13 @@ A Laravel package to get many kinds of DB information through command line.
 
 (This package is maintained under L5.4)
 
+What this package can is to ..
+
+1. Generate code 
+2. Find column or table 
+3. Show fields 
+4. Show rows 
+
 # Installation
 
 Execute the next command.
@@ -20,7 +27,7 @@ Now you have `db:code` and `db:find` in `php artisan` commands.
 
 # Usage
 
-## 1. Generating code
+## 1. Generate code
 
 **Basic**
 
@@ -38,7 +45,7 @@ or
 
     php artisan db:code App\\User array
     
-SHOWING_TYPEs
+GENERATING_TYPEs
 
 * array
 * rule
@@ -328,7 +335,7 @@ Note: Output code is including mutators.
     }
 
 
-## 2. Finding column or table 
+## 2. Find column or table 
 
     php artisan db:find SEARCH_KEYWORD
 
@@ -369,7 +376,7 @@ e.g.)
 
     */
     
-## 3. Show rows 
+## 4. Show rows 
 
     php artisan db:count TABLE_NAME
 
