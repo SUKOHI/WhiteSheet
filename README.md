@@ -23,7 +23,7 @@ Set the service providers in app.php
         Sukohi\WhiteSheet\WhiteSheetServiceProvider::class,
     ]
 
-Now you have `db:code` and `db:find` in `php artisan` commands.
+Now you have this package's commands in `php artisan` commands.
 
 # Usage
 
