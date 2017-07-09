@@ -59,6 +59,14 @@ class WhiteSheetServiceProvider extends ServiceProvider {
 
         });
         $this->commands('command.db:count');
+
+        // Tail
+        $this->app->singleton('command.db:tail', function ($app) {
+
+            return $app['Sukohi\WhiteSheet\Commands\TailCommand'];
+
+        });
+        $this->commands('command.db:tail');
     }
 
     /**

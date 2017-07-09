@@ -1,14 +1,14 @@
 # WhiteSheet
-A Laravel package to get many kinds of DB information through command line.
-
+A Laravel package to get many kinds of DB information through command line.  
 (This package is maintained under L5.4)
 
-What this package can is to ..
+[Commands]:
 
-1. Generate code 
-2. Find column or table 
-3. Show fields 
-4. Show rows 
+* `db:code` : Generate code 
+* `db:find` : Find column or table 
+* `db:fields` : Show fields 
+* `db:count` : Show rows 
+* `db:tail` : Show the newest tables or rows 
 
 # Installation
 
@@ -346,8 +346,8 @@ e.g.)
     /* Output
     
         [ authors ]:
-         => created_user_id
-         => updated_user_id
+         - created_user_id
+         - updated_user_id
          
         [ users ]:
 
@@ -390,6 +390,42 @@ e.g.)
 
     */
     
+    
+## 4. Show the newest tables or rows 
+
+(for Tables)
+
+    php artisan db:tail
+
+    /* Output
+    
+        2017-07-01 15:11:59 : [ users ] 
+        2017-07-09 18:20:59 : [ users ] 
+        2017-07-09 18:30:00 : [ movies ] 
+        2017-07-09 18:31:00 : [ songs ] 
+        2017-07-09 18:34:00 : [ songs ] 
+    
+    */
+
+(for Rows)
+
+    php artisan db:tail TABLE_NAME
+    
+    /* Output
+    
+        [ songs ]:
+         - 2017-07-01 15:11:59 (ID: 208)
+         - 2017-07-01 15:11:59 (ID: 202)
+         - 2017-07-01 15:11:59 (ID: 203)
+         - 2017-07-09 18:31:00 (ID: 204)
+         - 2017-07-09 18:34:00 (ID: 205)
+
+    
+    */
+
+[options]:
+
+* --limit, -l : How many lines do you want to show? Default is 5.
 
 # License
 

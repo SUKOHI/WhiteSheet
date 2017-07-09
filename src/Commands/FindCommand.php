@@ -80,7 +80,7 @@ class FindCommand extends Command
 
             foreach ($columns as $column) {
 
-                echo $this->info(' => '. $column);
+                echo $this->info(' - '. $column);
 
             }
 
